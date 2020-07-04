@@ -7,6 +7,7 @@ let  items = ["I like Tacos.", "Tacos are good."];
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("static"));
 
 
 app.get("/", function(req, res) {
