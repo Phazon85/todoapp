@@ -1,8 +1,5 @@
 
-module.exports.getDate = getDate
-module.exports.getDay = getDay
-
-function getDate() {
+exports.getDate = function() {
     let today = new Date();
     let options = {
         weekday: "long",
@@ -10,17 +7,15 @@ function getDate() {
         month: "long"
     };
     
-    let day = today.toLocaleDateString("en-us", options);
-    return day;
+    return today.toLocaleDateString("en-us", options);
+
 }
 
-
-function getDay() {
+exports.getDay = function() {
     let today = new Date();
     let options = {
         weekday: "long",
     };
     
-    let day = today.toLocaleDateString("en-us", options);
-    return day;
+    return today.toLocaleDateString("en-us", options);
 }
